@@ -1,0 +1,16 @@
+import axios from "axios";
+
+const API = axios.create({
+  baseURL: import.meta.env.VITE_API_URL,
+});
+
+// Har request mein token auto add hoga
+API.interceptors.request.use((req) => {
+  const user = localStorage.getItem("user");
+  if (user) {
+    req.headers.Authorization = `Bearer ${JSON.parse(user).token}`;
+  }
+  return req;
+});
+
+export default API;
