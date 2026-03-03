@@ -11,6 +11,7 @@ const Categories = () => {
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState("");
   const [form, setForm] = useState({ name: "", description: "" });
+  
 
   useEffect(() => {
     fetchCategories();
