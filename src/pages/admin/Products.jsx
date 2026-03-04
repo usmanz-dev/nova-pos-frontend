@@ -397,7 +397,7 @@ const Products = () => {
                 <h3 className="font-bold text-gray-800">{product.name}</h3>
                 <p className="text-xs text-gray-400 mt-0.5">{product.sku} · {product.category?.name}</p>
 
-                {/* Variants preview */}
+                {/* Variants preview Section */}
                 {product.variants?.length > 0 && (
                   <div className="flex flex-wrap gap-1 mt-2">
                     {product.variants.slice(0, 3).map((v, i) => (
